@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.services.CategoriaService;
 
+
 @RestController
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
@@ -20,6 +21,8 @@ public class CategoriaResource {
 	@Autowired
 	private CategoriaService service;
 	
+	//RequestMapping value, recebendo o valor do ID, utilizando o metodo get.
+	//find(@pathVariable) apontando que o id recebido vem do webservice.
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 		Categoria obj = service.buscar(id);

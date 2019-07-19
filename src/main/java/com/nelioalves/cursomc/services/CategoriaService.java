@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.repositories.CategoriaRepository;
 
+//classe responsavel por acessar o banco de dados (DAO)
 @Service
 public class CategoriaService {
 	
+	//Automaticamente instanciada pelo Spring, injeçao de dependencia ou inversão de valores.
 	@Autowired
 	private CategoriaRepository repo;
 	
